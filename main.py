@@ -37,8 +37,9 @@ if __name__ == '__main__' :
             print("Board: ")
             SudokuSolver.print_board(table)
             SudokuSolver.solve(table)
-            print("-----------------------")
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print("Solved Board: ")
             SudokuSolver.print_board(table)
-
+            
         
 
