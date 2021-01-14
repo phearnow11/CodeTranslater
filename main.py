@@ -4,7 +4,7 @@ import CodeTranslater
 if __name__ == '__main__' :
 
     print("----------------------------------------------------------------------------------------------------------------")
-    print("--------------------------------------------------Made by Phien-------------------------------------------------")
+    print("--------------------------------------------------Made by Phien-hii------------------------------------------------")
     print("Options: \n\n Encode Ceasar Code (1) \n\n Decode Ceasar Code (2) \n\n Encode VigenegeCode (3) \n\n Quit (9) \n\n")
     open = True
     while open :
