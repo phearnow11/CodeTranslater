@@ -13,11 +13,10 @@ def EncodeCeasarCode(text, shift, alphabets):
 
 def DecodeCeasarCode(text, alphabets):
 
-    for i in range(1, 27):
-        arr = []
-        for i in range(1,27):
-            arr.append(EncodeCeasarCode(text, i, alphabets))
-        return arr
+    arr = []
+    for i in range(1,27):
+        arr.append(EncodeCeasarCode(text, i, alphabets))
+    return arr
 
 def DecodeVigenege(code, key):
 
@@ -37,3 +36,15 @@ def DecodeVigenege(code, key):
     return ''.join(EncodedVigenege)
 
 
+def DecodePlayfair(code, key):
+
+    merge_alphabet = list(code) + list(string.ascii_lowercase) 
+    Merged_alphabets = list(dict.fromkeys(merge_alphabet))
+    rows = 5
+    columns = 5
+    matrix = []
+    for i in range(0, rows):
+        matrix.append([])
+        for j in range(0, columns):
+            for k in range(0, len(Merged_alphabets)):
+                matrix[i].append(Merged_alphabets[k])
