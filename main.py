@@ -6,7 +6,7 @@ if __name__ == '__main__' :
 
     print("----------------------------------------------------------------------------------------------------------------")
     print("--------------------------------------------------Made by Phien-------------------------------------------------")
-    print("Options: \n\n Encode Ceasar Code (1) \n\n Decode Ceasar Code (2) \n\n Encode VigenegeCode (3) \n\n SudokuSolver (4) \n\n Quit (9) \n\n")
+    print("Options: \n\n Encode Ceasar Code (1) \n\n Decode Ceasar Code (2) \n\n Encode VigenegeCode (3) \n\n SudokuSolver (4) \n\n Decode Playfair (5) \n\n Quit (9) \n\n")
     open = True
     while open :
         Option = int(input("Option: "))
@@ -23,7 +23,7 @@ if __name__ == '__main__' :
             code = input("Code you want to decode: ")
             key = input("Key: ")
             if len(code) != len(key):
-                print("Error!!")
+                print("Error!! Key has to equal to code !!")
             else:
                 print("Decoded Vigenege Code:", CodeTranslater.DecodeVigenege(code, key))
         if Option == 4:
@@ -40,6 +40,10 @@ if __name__ == '__main__' :
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
             print("Solved Board: ")
             SudokuSolver.print_board(table)
+        if Option == 5 :
+            print("Dang trong giai doan phat trien!")
+            #columns = 5 
+            #rows = 5 #
             
         
 
