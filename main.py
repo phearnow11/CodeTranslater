@@ -1,12 +1,14 @@
 import string
-import CodeTranslater
+import function
 import SudokuSolver
+import group
+import sympy as sp
 
 if __name__ == '__main__' :
 
     print("----------------------------------------------------------------------------------------------------------------")
     print("--------------------------------------------------Made by Phien-------------------------------------------------")
-    print("Options: \n\n Encode Ceasar Code (1) \n\n Decode Ceasar Code (2) \n\n Encode VigenegeCode (3) \n\n SudokuSolver (4) \n\n Decode Playfair (5) \n\n Quit (9) \n\n")
+    print("Options: \n\n Encode Ceasar Code (1) \n\n Decode Ceasar Code (2) \n\n Encode VigenegeCode (3) \n\n SudokuSolver (4) \n\n DaoHam (5) \n\n Quit (9) \n\n")
     open = True
     while open :
         Option = int(input("Option: "))
@@ -15,17 +17,17 @@ if __name__ == '__main__' :
         if Option == 1:
             text = input("Text you want to encode: ")
             shift = int(input("Step to fall back: "))
-            print("Encoded CeasarCode:", CodeTranslater.EncodeCeasarCode(text,shift,[string.ascii_uppercase, string.ascii_lowercase, string.punctuation]))
+            print("Encoded CeasarCode:", function.EncodeCeasarCode(text,shift,[string.ascii_uppercase, string.ascii_lowercase, string.punctuation]))
         if Option == 2:
             text = input("Code you want to decode: ")
-            print("Decoded CeasarCode:", CodeTranslater.DecodeCeasarCode(text,[string.ascii_lowercase, string.ascii_uppercase, string.punctuation]))
+            print("Decoded CeasarCode:", function.DecodeCeasarCode(text,[string.ascii_lowercase, string.ascii_uppercase, string.punctuation]))
         if Option == 3:
             code = input("Code you want to decode: ")
             key = input("Key: ")
             if len(code) != len(key):
                 print("Error!! Key has to equal to code !!")
             else:
-                print("Decoded Vigenege Code:", CodeTranslater.DecodeVigenege(code, key))
+                print("Decoded Vigenege Code:", function.DecodeVigenege(code, key))
         if Option == 4:
             columns = 9
             rows = 9
@@ -40,10 +42,11 @@ if __name__ == '__main__' :
             print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
             print("Solved Board: ")
             SudokuSolver.print_board(table)
-        if Option == 5 :
-            print("Dang trong giai doan phat trien!")
-            #columns = 5 
-            #rows = 5 #
-            
+        if Option == 5:
+            x = sp.Symbol('x')
+            n = input("nhap dao ham: ")
+            print(function.daoham(n))
+
+
         
 

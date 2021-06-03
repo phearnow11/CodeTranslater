@@ -1,4 +1,5 @@
 import string
+import sympy as sp 
 
 def EncodeCeasarCode(text, shift, alphabets):
 
@@ -35,4 +36,7 @@ def DecodeVigenege(code, key):
 
     return ''.join(EncodedVigenege)
 
+def daoham(n):
+    x = sp.Symbol('x')
+    return sp.diff(n, x)
 
