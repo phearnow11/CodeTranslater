@@ -1,7 +1,6 @@
 import string
 import function
 import SudokuSolver
-import group
 import sympy as sp
 
 if __name__ == '__main__' :
@@ -43,10 +42,13 @@ if __name__ == '__main__' :
             print("Solved Board: ")
             SudokuSolver.print_board(table)
         if Option == 5:
-            x = sp.Symbol('x')
-            n = input("nhap dao ham: ")
-            print(function.daoham(n))
-
-
-        
-
+            bienso = int(input("số biến: "))
+            if bienso == 1:
+                x = sp.Symbol('x')
+                n = input("nhap dao ham: ")
+                print(function.daoham(n,bienso))
+            if bienso == 2:
+                x, y = sp.symbols('x y')
+                n = input("nhap dao ham: ")
+                print(function.daoham(n,bienso))
+                

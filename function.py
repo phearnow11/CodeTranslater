@@ -36,7 +36,10 @@ def DecodeVigenege(code, key):
 
     return ''.join(EncodedVigenege)
 
-def daoham(n):
-    x = sp.Symbol('x')
-    return sp.diff(n, x)
-
+def daoham(n,bienso):
+    if bienso == 1:
+        x = sp.Symbol('x')
+        return sp.diff(n, x)
+    elif bienso == 2:
+        x, y = sp.symbols('x y')
+        return sp.diff(n, x)
